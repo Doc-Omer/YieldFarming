@@ -74,7 +74,7 @@
   "sourceMap": "61:584:1:-;;;163:58;8:9:-1;5:2;;;30:1;27;20:12;5:2;163:58:1;203:10;195:5;;:18;;;;;;;;;;;;;;;;;;61:584;;;;;;",
   "deployedSourceMap": "61:584:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;61:584:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;458:184;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;458:184:1;;;;;;;;;;;;;;;;;;;:::i;:::-;;116:36;;;:::i;:::-;;;;;;;;;;;;;;;;;;;87:20;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;341:109;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;341:109:1;;;;;;;;;;;;;;;;;:::i;:::-;;458:184;282:5;;;;;;;;;;;268:19;;:10;:19;;;260:53;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;531:19;564:11;531:45;;587:8;:21;;;609:24;;587:47;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;587:47:1;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;587:47:1;;;;324:1;458:184;:::o;116:36::-;;;;:::o;87:20::-;;;;;;;;;;;;;:::o;341:109::-;282:5;;;;;;;;;;;268:19;;:10;:19;;;260:53;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;433:9;406:24;:36;;;;341:109;:::o",
   "source": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.5.16;\r\n\r\ncontract Migrations{\r\n    address public owner;\r\n\r\n    uint public last_completed_migration;\r\n\r\n\r\n    constructor() public {\r\n        owner = msg.sender;\r\n    }\r\n\r\n    modifier onlyOwner(){\r\n        require(msg.sender == owner, \"You are not the owner\");\r\n        _;\r\n    }\r\n\r\n    function setCompleted(uint completed) public onlyOwner{\r\n        last_completed_migration = completed;\r\n    }\r\n\r\n    function upgrade(address payable new_address) public onlyOwner{\r\n        Migrations upgraded = Migrations(new_address);\r\n        upgraded.setCompleted(last_completed_migration);\r\n    }\r\n}",
-  "sourcePath": "C:\\Users\\moham\\Documents\\OptimusFox\\Yield Farming\\defi-staking-app-starter\\defi-staking-app-starter\\src\\contracts\\Migrations.sol",
+  "sourcePath": "C:\\Users\\moham\\Documents\\OptimusFox\\Yield-Farming\\src\\contracts\\Migrations.sol",
   "ast": {
     "absolutePath": "project:/src/contracts/Migrations.sol",
     "exportedSymbols": {
@@ -1587,12 +1587,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x73566A6D958d021814E401B4E6CeF099A06C46F7",
-      "transactionHash": "0x18ed023d3952f5600b3304f805aff2de75a3cb87d64bfbf87ed6cf74be4b92e5"
+      "address": "0x881329bC017ae537c9716b0e3C5392cEf0985A1e",
+      "transactionHash": "0x75b7f5810bea8bb60598fc864f9ece610046fc7400dd66be9881373ca12ffba5"
     }
   },
   "schemaVersion": "3.4.10",
-  "updatedAt": "2022-11-28T14:08:22.031Z",
+  "updatedAt": "2022-12-02T10:31:38.284Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}

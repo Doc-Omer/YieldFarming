@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Tether from '../tether.png'
+import Airdrop from './Airdrop';
 
 class Main extends Component {
     // Our react Code
@@ -53,7 +54,7 @@ class Main extends Component {
                             this.props.unstakeTokens()
                         )
                     }} className='btn btn-primary btn-lg btn-block'>WITHDRAW</button>
-                    <div className='card-body text-center float-middle' style={{color: 'white', backgroundColor: 'black', width: '150px', marginLeft: 'auto', marginRight: 'auto', marginTop: '13px'}}> AIRDROP</div>
+                    <div className='card-body text-center float-middle' style={{color: 'white', backgroundColor: 'black', width: '150px', marginLeft: 'auto', marginRight: 'auto', marginTop: '13px'}}> AIRDROP<Airdrop/></div>
                 </div>
             </div>
         )
